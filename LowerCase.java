@@ -11,7 +11,17 @@ public class LowerCase {
     * Non-letter characters are left as is.
     */
     public static String lowerCase(String s) {
-        // Replace the following statement with your code
-        return null;
+        int sLength = s.length();
+        String outStr = "";
+        for (int i = 0; i < sLength; i++) {
+            char letter = s.charAt(i);
+            // using the ASCII codes to convert the letters
+            if ((letter >= 65) && (letter <= 90)) {
+                int decimalCode = (int) letter + 32;
+                letter = (char) decimalCode;
+            }
+            outStr = outStr + letter;
+        }
+        return outStr;
     }
 }

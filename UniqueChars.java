@@ -11,7 +11,21 @@ public class UniqueChars {
      * unless they are space characters.
      */
     public static String uniqueChars(String s) {
-        // Replace the following statement with your code
-        return null;
+        int sLength = s.length();
+        String outStr = "";
+        for (int i = 0; i < sLength; i++) {
+            char newLetter = s.charAt(i);
+            boolean doNotPrint = false;
+            for (int n = 0; n < outStr.length(); n++) {
+                char existingLetter = outStr.charAt(n);
+                if ((existingLetter == newLetter) && (newLetter != ' ')) {
+                    doNotPrint = true;
+                }
+            }
+            if (!doNotPrint) {
+            outStr = outStr + newLetter;
+            }
+        }
+        return outStr;
     }
 }
