@@ -59,8 +59,8 @@ public class LoanCalc {
 	// Side effect: modifies the class variable iterationCounter.
     public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
 		double H = loan;
-		double L = 0;
-		double endPayment = loan/2;
+		double L = loan/n;
+		double endPayment = (L+H)/2;
 		iterationCounter = 0;
 		while ((Math.abs(endBalance(loan, rate, n, endPayment)) > epsilon)) {
 			if (endBalance(loan, rate, n, endPayment) > 0) {
