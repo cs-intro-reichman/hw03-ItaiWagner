@@ -25,7 +25,7 @@ public class Calendar0 {
 		for (int month = 1; month <= 12; month++) {
 			int daysNum = nDaysInMonth(month, year);
 			System.out.println("Month " + month + " has " + daysNum + " days");
-		};  
+		}
 	}
 
 	// Returns true if the given year is a leap year, false otherwise.
